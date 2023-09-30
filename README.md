@@ -1,136 +1,271 @@
+# Fractals Portfolio
 
-Fractals Portfolio
-Forest Pearson
-June 2023
-1 Entires
-1.1 Complex Choice: Burning Ship
-Figure 1: Burning Ship Fractal
-Paradigm & Mathematical Description: The burning ship itself is a frac-
-tal described by Michael Michelitsh and Otto E Rossler in 1992 where like the
-mandelbrot it makes use of both real and imaginary numbers for its complex
-values. The difference here being that the iterating function isz=abs(z)^2 +c
-where the imaginary values are set to their absolute values instead ofz=z^2 +c
-and diveregence is checked bycabs(z)> 2 .0. The initial complex number set of
-cz, zyis obtained by mapping each (x, y) point on the screen from it’s respective
-position with the functons:
-cx= 2∗((x−(swidth/ 4 .0))∗(swidth/ 4 .0)) andcy= 2∗((y−(sheight/ 2 .0))∗
-(sheight/ 2 .0))
-The screen itself is broken up into two halves, with the right containing
-the full fractal and the left containing the zoomed location around a chosen
-point. This zoom is created by four x and y max/min variables combined with
-a fed in zoom value from 0-1. This is used to create the real and imaginary
-values in conjunction with the previous position function. Ending up with
-dx= (xmax−xmin)/(swidth/ 2 .0) andreal=xmin+x∗dxwithin the loop
-for x while a corresponding counterpart is created for y. This then loops through
-the designated space to create the zoomed in affect.
-Artistic Description: For this fractal I kept the design simple to show of
-the complexity created in the burning ship fractal set. I focused on setting the
-red-orange color for divergence for the burning theme it’s named after and spent
-my time focusing on improving the interactiveness of the fractal. Part of the fun
-I found is exploring this fractal as if it’s a new world, zooming in and traveling
-across it. These capabilities are what I enabled with the controls seen in figure
-1 where it is currently zoomed in on the most iconic part of the burning ship
-seen on the left antenna.
-The coloring for depth here is done by multiplying set red and green values
-between 0-1 against the valuesf= 1. 0 ∗k/repswhere reps is the max depth
-and k is the current diverging or set depth. This allows it to naturally progress
-from one shade to another then eventually to black as it fully diverges for both
-the main fractal and the zoom.
-1.2 Complex: Mandelbrot and Juliet Exploration
-Figure 2: Mandelbrot And Juliet Fractal
-Paradigm & Mathematical Description: The mandelbrot fractal is a set
-of complex numbers discovered by Benoit Mandelbrot in 1980 while working at
-IBM, wheras the Juliet set was discovered by Gaston Julia and Pierre Fatou
-where they were then popularized by Benoit Mandelbrot due to their close na-
-ture. For mathmatics the mandelbrot takes a simplified version of what I did
-in the burning ship with the iterating function beingz=z^2 +cwhile still using
-cabs(z)> 2 .0 to check for divergence. The variables cz and cy are still obtained
-in the same position functions:
-cx= 2∗((x−(swidth/ 4 .0))∗(swidth/ 4 .0)) andcy= 2∗((y−(sheight/ 2 .0))∗
-(sheight/ 2 .0))
-The Juliet here though takes in the position of a single (x, y) pixel decided
-by the cursor into the cy and cx functions to create a complex numberc=
-mx+my∗I. This with a passed in depth and zoom is then fed into the julia
-which recursively travels through the left hand half of the screens width and
-height while iterating withz=z^2 +cwhere c is a constant not recalculated.
-Artistic Description: For this fractal I once again kept the design simple to
-show of the complexity created here in the Mandelbrot and Juliet together. I
-setup a gentle blue color for divergence spent my time focusing on improving the
-interactiveness across both the fractals. I found it mesmerizing to explore the
-edges of the Mandelbrot and see the vastly different Juliet sets created, which
-you can see in Figure 2 where I discovered a spiraling pattern different from a
-dozen others I had previously seen.
-The coloring for depth here is once again done by multiplying a set blue color
-value between 0-1 against the valuesf= 1. 0 ∗k/repswhere reps is the max
-depth and k is the current diverging or set depth. This allows it to naturally
-progress from one shade to another then eventually to black as it fully diverges.
-1.3 Lsys: A peaceful night
-Figure 3: Lsys Fern Fractal
-Paradigm & Mathematical Description: For this fractal the Lindenmayer
-Systems was discovered by Aristid Lindenmayer in 1968 during his time as
-a botanist at the University of Utrecht. The Lindenmayer system creates a
-formal grammer production system making use of rules to recursively build a
-progressively larger string dependent on depth. Here this sytem was used with
-an axiom A and two rulesA−> F−[A]−−A++[++A] andF−> F Fwhere +
-and−move the angle of the system clockwise or counterclockwise respectively,
-[ and ] push and pop the current vector data, then finally if a character such
-as F or A is encounted the direction is moved along a preset length directed by
-the mentioned angle values.
-Artistic Description: For this fractal I created a solitary fern bush among a
-starry night and a moon shining through the background. I did this in order to
-highlight the natural and organic style that can be generated by such a simplistic
-formal grammar. Showcasing how such natural designs seen in nature all around
-us can be recreated using pure mathematics, lending thought to how the world
-around us may take inspiration from similar mathematical principles in its own
-way.
-Beyond that the stars are simply randomly generated Gpoints for a set amount
-between the screens width and height while the moon and planet are offset filled
-circles of various sizes.
-1.4 Recursive: A snowy wonderland
-Figure 4: Recursive Koch Snowflake Fractal
-Paradigm & Mathematical Description: For this fractal the snowflake
-is an exploration of the Koch Curve discovered by Helge von Koch in a con-
-structible geometry paper written in 1904. The koch curve here is generated
-using a recursive function from two points in essence on a single line (p 1 , p 2 ),
-these points then create a a third segment with pointsp 3 , p 4 evenly between
-them and a additional pointp 3 to create an equilatoral triangle between points
-(p 3 , p 4 , p 5 ). The pointp 5 here can be calculated by making use of sin and cos in
+## Forest Pearson
+
+## June 2023
+
+## 1 Entires
+
+## 1.1 Complex Choice: Burning Ship
+
+#### Figure 1: Burning Ship Fractal
+
+#### Paradigm & Mathematical Description: The burning ship itself is a frac-
+
+#### tal described by Michael Michelitsh and Otto E Rossler in 1992 where like the
+
+#### mandelbrot it makes use of both real and imaginary numbers for its complex
+
+#### values. The difference here being that the iterating function isz=abs(z)^2 +c
+
+#### where the imaginary values are set to their absolute values instead ofz=z^2 +c
+
+#### and diveregence is checked bycabs(z)> 2 .0. The initial complex number set of
+
+#### cz, zyis obtained by mapping each (x, y) point on the screen from it’s respective
+
+#### position with the functons:
+
+
+#### cx= 2∗((x−(swidth/ 4 .0))∗(swidth/ 4 .0)) andcy= 2∗((y−(sheight/ 2 .0))∗
+
+#### (sheight/ 2 .0))
+
+#### The screen itself is broken up into two halves, with the right containing
+
+#### the full fractal and the left containing the zoomed location around a chosen
+
+#### point. This zoom is created by four x and y max/min variables combined with
+
+#### a fed in zoom value from 0-1. This is used to create the real and imaginary
+
+#### values in conjunction with the previous position function. Ending up with
+
+#### dx= (xmax−xmin)/(swidth/ 2 .0) andreal=xmin+x∗dxwithin the loop
+
+#### for x while a corresponding counterpart is created for y. This then loops through
+
+#### the designated space to create the zoomed in affect.
+
+#### Artistic Description: For this fractal I kept the design simple to show of
+
+#### the complexity created in the burning ship fractal set. I focused on setting the
+
+#### red-orange color for divergence for the burning theme it’s named after and spent
+
+#### my time focusing on improving the interactiveness of the fractal. Part of the fun
+
+#### I found is exploring this fractal as if it’s a new world, zooming in and traveling
+
+#### across it. These capabilities are what I enabled with the controls seen in figure
+
+#### 1 where it is currently zoomed in on the most iconic part of the burning ship
+
+#### seen on the left antenna.
+
+#### The coloring for depth here is done by multiplying set red and green values
+
+#### between 0-1 against the valuesf= 1. 0 ∗k/repswhere reps is the max depth
+
+#### and k is the current diverging or set depth. This allows it to naturally progress
+
+#### from one shade to another then eventually to black as it fully diverges for both
+
+#### the main fractal and the zoom.
+
+
+### 1.2 Complex: Mandelbrot and Juliet Exploration
+
+#### Figure 2: Mandelbrot And Juliet Fractal
+
+#### Paradigm & Mathematical Description: The mandelbrot fractal is a set
+
+#### of complex numbers discovered by Benoit Mandelbrot in 1980 while working at
+
+#### IBM, wheras the Juliet set was discovered by Gaston Julia and Pierre Fatou
+
+#### where they were then popularized by Benoit Mandelbrot due to their close na-
+
+#### ture. For mathmatics the mandelbrot takes a simplified version of what I did
+
+#### in the burning ship with the iterating function beingz=z^2 +cwhile still using
+
+#### cabs(z)> 2 .0 to check for divergence. The variables cz and cy are still obtained
+
+#### in the same position functions:
+
+#### cx= 2∗((x−(swidth/ 4 .0))∗(swidth/ 4 .0)) andcy= 2∗((y−(sheight/ 2 .0))∗
+
+#### (sheight/ 2 .0))
+
+#### The Juliet here though takes in the position of a single (x, y) pixel decided
+
+#### by the cursor into the cy and cx functions to create a complex numberc=
+
+#### mx+my∗I. This with a passed in depth and zoom is then fed into the julia
+
+#### which recursively travels through the left hand half of the screens width and
+
+#### height while iterating withz=z^2 +cwhere c is a constant not recalculated.
+
+#### Artistic Description: For this fractal I once again kept the design simple to
+
+#### show of the complexity created here in the Mandelbrot and Juliet together. I
+
+#### setup a gentle blue color for divergence spent my time focusing on improving the
+
+#### interactiveness across both the fractals. I found it mesmerizing to explore the
+
+#### edges of the Mandelbrot and see the vastly different Juliet sets created, which
+
+
+#### you can see in Figure 2 where I discovered a spiraling pattern different from a
+
+#### dozen others I had previously seen.
+
+#### The coloring for depth here is once again done by multiplying a set blue color
+
+#### value between 0-1 against the valuesf= 1. 0 ∗k/repswhere reps is the max
+
+#### depth and k is the current diverging or set depth. This allows it to naturally
+
+#### progress from one shade to another then eventually to black as it fully diverges.
+
+### 1.3 Lsys: A peaceful night
+
+#### Figure 3: Lsys Fern Fractal
+
+
+#### Paradigm & Mathematical Description: For this fractal the Lindenmayer
+
+#### Systems was discovered by Aristid Lindenmayer in 1968 during his time as
+
+#### a botanist at the University of Utrecht. The Lindenmayer system creates a
+
+#### formal grammer production system making use of rules to recursively build a
+
+#### progressively larger string dependent on depth. Here this sytem was used with
+
+#### an axiom A and two rulesA−> F−[A]−−A++[++A] andF−> F Fwhere +
+
+#### and−move the angle of the system clockwise or counterclockwise respectively,
+
+#### [ and ] push and pop the current vector data, then finally if a character such
+
+#### as F or A is encounted the direction is moved along a preset length directed by
+
+#### the mentioned angle values.
+
+#### Artistic Description: For this fractal I created a solitary fern bush among a
+
+#### starry night and a moon shining through the background. I did this in order to
+
+#### highlight the natural and organic style that can be generated by such a simplistic
+
+#### formal grammar. Showcasing how such natural designs seen in nature all around
+
+#### us can be recreated using pure mathematics, lending thought to how the world
+
+#### around us may take inspiration from similar mathematical principles in its own
+
+#### way.
+
+#### Beyond that the stars are simply randomly generated Gpoints for a set amount
+
+#### between the screens width and height while the moon and planet are offset filled
+
+#### circles of various sizes.
+
+
+### 1.4 Recursive: A snowy wonderland
+
+#### Figure 4: Recursive Koch Snowflake Fractal
+
+#### Paradigm & Mathematical Description: For this fractal the snowflake
+
+#### is an exploration of the Koch Curve discovered by Helge von Koch in a con-
+
+#### structible geometry paper written in 1904. The koch curve here is generated
+
+#### using a recursive function from two points in essence on a single line (p 1 , p 2 ),
+
+#### these points then create a a third segment with pointsp 3 , p 4 evenly between
+
+#### them and a additional pointp 3 to create an equilatoral triangle between points
+
+#### (p 3 , p 4 , p 5 ). The pointp 5 here can be calculated by making use of sin and cos in
+
+
 the functionp 5 x=p 3 x+ (p (^4) x−p (^3) x)∗cos(P I/ 3 .0)−(p 4 y−p 3 y)∗sin(P I/ 3 .0)
 andp 5 y=p 3 y+ (p (^4) x−p (^3) x)∗sin(P I/ 3 .0)−(p 4 y−p 3 y)∗cos(P I/ 3 .0). This
 
-can then be repeated recursively for each segment between two points to create
-the geometric Koch pattern we know. For the snowflake itself the Koch curve
-is started three times upon an equilateral triangle consisting of three passed
-points, leading to the design seen above.
-Artistic Description: For this fractal I envisioned a late snowy night here in
-Portland, staring out into the dark night with large clumpy flakes visible only
-due to the light peaking through the window with you. A simple time where
-you can simply bask in the nature around you.
-For how this is setup the initial equilateral triangles and then snowflakes
-are given random locations and sizes across the screen where they are then
-generated for a depth of 5. This is combined with a subtle blue gradient taking
-the height of the screen as a modifier to the rgb 0-1 values.
-1.5 IFS: An initial card
-Figure 5: IFS Fractal
-Paradigm & Mathematical Description: For this fractal the Iterated
-Function System were discovered formaly by John E. Hutchinson in 1981. This
-is a method of creating fractals that can be considered self-similar, where they
-themselves can be seen as the repeating pattern. For this fractal my initials
-were drawn down using a graph sheet to create percise fractions upon which
-I could generate the fractal. This is done by randomly selecting from a set of
-rules that will scale and translate a shared position where scale determine the
-size based upon a fraction given and translate will move the position by given
-fractions as well. These repeatedly processed rules will then generate a pattern
-based upon the scaling, translating, and rotating, setup among them.
-Artistic Description: For this fractal it is a simple card with my initials upon
-it, with different rules containing unique colors to showcase the functionality of
-how the iterated function system works in its random selection of the rules.
-You can see how depending upon the (x, y) scaling letters appear streched or
-shrunked, allowing for a more percise fit into the letters themselves.All of this
-is then highlighted with a simple gold border.
-2 Code
-2.1 Complex Choice: Burning Ship
-1 /∗
+#### can then be repeated recursively for each segment between two points to create
+
+#### the geometric Koch pattern we know. For the snowflake itself the Koch curve
+
+#### is started three times upon an equilateral triangle consisting of three passed
+
+#### points, leading to the design seen above.
+
+#### Artistic Description: For this fractal I envisioned a late snowy night here in
+
+#### Portland, staring out into the dark night with large clumpy flakes visible only
+
+#### due to the light peaking through the window with you. A simple time where
+
+#### you can simply bask in the nature around you.
+
+#### For how this is setup the initial equilateral triangles and then snowflakes
+
+#### are given random locations and sizes across the screen where they are then
+
+#### generated for a depth of 5. This is combined with a subtle blue gradient taking
+
+#### the height of the screen as a modifier to the rgb 0-1 values.
+
+### 1.5 IFS: An initial card
+
+#### Figure 5: IFS Fractal
+
+#### Paradigm & Mathematical Description: For this fractal the Iterated
+
+#### Function System were discovered formaly by John E. Hutchinson in 1981. This
+
+
+#### is a method of creating fractals that can be considered self-similar, where they
+
+#### themselves can be seen as the repeating pattern. For this fractal my initials
+
+#### were drawn down using a graph sheet to create percise fractions upon which
+
+#### I could generate the fractal. This is done by randomly selecting from a set of
+
+#### rules that will scale and translate a shared position where scale determine the
+
+#### size based upon a fraction given and translate will move the position by given
+
+#### fractions as well. These repeatedly processed rules will then generate a pattern
+
+#### based upon the scaling, translating, and rotating, setup among them.
+
+#### Artistic Description: For this fractal it is a simple card with my initials upon
+
+#### it, with different rules containing unique colors to showcase the functionality of
+
+#### how the iterated function system works in its random selection of the rules.
+
+#### You can see how depending upon the (x, y) scaling letters appear streched or
+
+#### shrunked, allowing for a more percise fit into the letters themselves.All of this
+
+#### is then highlighted with a simple gold border.
+
+## 2 Code
+
+### 2.1 Complex Choice: Burning Ship
+
+##### 1 /∗
+
 2 #Forest Pearson
 3 #Fractals course
 4 #06/14/
@@ -161,6 +296,7 @@ is then highlighted with a simple gold border.
 29 // i t e r a t e through each p i x e l of window
 30 f o r ( int x = 0; x<swidth /2; x++){
 31 f o r ( int y = 0; y<sheight ; y++){
+
 
 32 // map to coordinating complex number
 33 cx = 2∗((x−(swidth /4.0) ) /( swidth /4.0) ) ;
@@ -220,6 +356,7 @@ cimag ( z ) )∗I )+c ;
 85 }
 86 }
 
+
 87 int main (){
 88 G init graphics ( swidth , sheight ) ;
 89 Grgb (1 ,1 ,1) ;
@@ -278,8 +415,11 @@ cimag ( z ) )∗I )+c ;
 140
 141 }
 
-2.2 Complex: Mandelbrot Exploration
-1 /∗
+
+### 2.2 Complex: Mandelbrot Exploration
+
+##### 1 /∗
+
 2 #Forest Pearson
 3 #Fractals course
 4 #06/14/
@@ -334,6 +474,7 @@ cimag ( z ) )∗I )+c ;
 53 }
 54 }
 55
+
 
 56 int j u l i a R e c u r s i v e ( f l o a t x , f l o a t y , int r , int depth , int max,
 double complex c , double complex z ){
@@ -393,6 +534,7 @@ sheight ) ∗ I ) ;
 106 Grgb (1 ,1 ,1) ;
 107 G f i l l c i r c l e (p [ 0 ] , p [ 1 ] , 3 ) ;
 
+
 108 double mx = 2∗((( p[0]−( swidth /2) )−(swidth /4.0) ) /( swidth
 /4.0) ) ;
 109 double my = 2∗((p[1]−( sheight /2.0) ) /( sheight /2.0) ) ;
@@ -407,8 +549,11 @@ sheight ) ∗ I ) ;
 118
 119 }
 
-2.3 Lsys: A peaceful night
-1 /∗
+### 2.3 Lsys: A peaceful night
+
+##### 1 /∗
+
+```
 2 #Forest Pearson
 3 #Fractals course
 4 #06/14/
@@ -448,6 +593,8 @@ sheight ) ∗ I ) ;
 38 }
 39 i f ( stack. yI<MAXSIZE−1) {
 40 stack. yI += 1;
+```
+
 41 stack. y [ stack. yI ] = cur [ 1 ] ;
 42 }
 43 i f ( stack. aI<MAXSIZE−1) {
@@ -505,6 +652,7 @@ derivation [ i ] == ’ f ’ ) {
 93 cur [ 0 ] = next [ 0 ] ;
 94 cur [ 1 ] = next [ 1 ] ;
 95
+
 
 96 i f ( cur [ 0 ] <xMin) xMin = cur [ 0 ] ; // Builds outer parameters
 while comparing
@@ -564,6 +712,7 @@ derivation [ i ] == ’ f ’ ) {
 147 }
 148
 
+
 149 void stringBuilder ( int curr , int max) {
 150 i f ( derivation [ 0 ] == ’\0 ’ ) {
 151 strcpy ( derivation , axiom ) ;
@@ -622,6 +771,7 @@ derivation [ i ] == ’ f ’ ) {
 203 stack. d [ 0 ] = ’\0 ’ ;
 204 stack. xI =−1;
 
+
 205 stack. yI =−1;
 206 stack. aI =−1;
 207
@@ -646,8 +796,11 @@ parameters.
 224 return 0;
 225 }
 
-2.4 Recursive: A snowy wonderland
-1 /∗
+### 2.4 Recursive: A snowy wonderland
+
+##### 1 /∗
+
+```
 2 #Forest Pearson
 3 #Fractals course
 4 #06/14/
@@ -677,6 +830,8 @@ b and c
 27 b [ 1 ] = a [ 1 ] + t [ 1 ] ∗ cos (MPI / 3.0) + t [ 0 ] ∗ sin (MPI / 3.0) ;
 28 c [ 0 ] = pOne [ 0 ] + ( 2. 0 / 3. 0 ) ∗ (pTwo [ 0 ] −pOne [ 0 ] ) ;
 29 c [ 1 ] = pOne [ 1 ] + ( 2. 0 / 3. 0 ) ∗ (pTwo [ 1 ] −pOne [ 1 ] ) ;
+```
+
 30 Gline (pOne [ 0 ] , pOne [ 1 ] , pTwo [ 0 ] , pTwo [ 1 ] ) ;
 31 Gf i l l t r i a n g l e ( a [ 0 ] , a [ 1 ] , b [ 0 ] , b [ 1 ] , c [ 0 ] , c [ 1 ] ) ;
 32
@@ -729,9 +884,14 @@ snowflake out of koch curves
 75 return 0;
 76 }
 
-2.5 IFS: An initial card
-1 /∗
+### 2.5 IFS: An initial card
+
+##### 1 /∗
+
+```
 2 #Forest Pearson
+```
+
 3 #Fractals course
 4 #06/14/
 5 ∗/
@@ -790,7 +950,9 @@ snowflake out of koch curves
 58 s c a l e (( double ) 2/9 ,( double ) 1/7) ;
 59 t r a n s l a t e (( double ) 2/9 ,( double ) 5/7) ;
 
-60 }
+
+##### 60 }
+
 61 e l s e i f (k == 3){
 62 s c a l e (( double ) 2/9 ,( double ) 1/7) ;
 63 t r a n s l a t e (( double ) 2/9 ,( double ) 3/7) ;
@@ -848,6 +1010,7 @@ snowflake out of koch curves
 115 current [ 0 ] = swidth ;
 116 current [ 1 ] = sheight ;
 
+
 117 current [ 0 ] = n ;
 118 current [ 1 ] = n ;
 119 current [ 0 ] = 0. 0 ;
@@ -860,3 +1023,5 @@ snowflake out of koch curves
 126 wait = Gwaitkey () ;
 127 Gsave tobmpfile ( ” IFSPortfolio .bmp” ) ;
 128 }
+
+
