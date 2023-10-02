@@ -69,7 +69,6 @@ Artistic Description: For this fractal it is a simple card with my initials upon
 
 ### 2.1 Complex Choice: Burning Ship
 
-##### 1 /∗
 ```
 2 #Forest Pearson
 3 #Fractals course
@@ -223,7 +222,6 @@ cimag ( z ) )∗I )+c ;
 
 ### 2.2 Complex: Mandelbrot Exploration
 
-##### 1 /∗
 ```
 2 #Forest Pearson
 3 #Fractals course
@@ -357,7 +355,6 @@ sheight ) ∗ I ) ;
 
 ### 2.3 Lsys: A peaceful night
 
-##### 1 /∗
 
 ```
 2 #Forest Pearson
@@ -605,7 +602,6 @@ parameters.
 
 ### 2.4 Recursive: A snowy wonderland
 
-##### 1 /∗
 
 ```
 2 #Forest Pearson
@@ -693,7 +689,6 @@ snowflake out of koch curves
 
 ### 2.5 IFS: An initial card
 
-##### 1 /∗
 
 ```
 2 #Forest Pearson
