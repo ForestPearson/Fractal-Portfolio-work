@@ -70,9 +70,9 @@ Artistic Description: For this fractal it is a simple card with my initials upon
 ### 2.1 Complex Choice: Burning Ship
 
 ```
-2 #Forest Pearson
-3 #Fractals course
-4 #06/14/
+2 Forest Pearson
+3 Fractals course
+4 06/14/
 5 ∗/
 6 #include ”FPToolkit. c”
 7 #include<stdio. h>
